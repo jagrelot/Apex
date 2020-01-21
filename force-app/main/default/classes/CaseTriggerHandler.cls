@@ -54,7 +54,7 @@ public class CaseTriggerHandler {
 
    for(Case cs : csList){
        if(cs.ContactId != null && contactToCaseMap.containsKey(cs.ContactId)){
-           if(contactToCaseMap.get(cs.ContactId).size() > 2){
+           if(contactToCaseMap.get(cs.ContactId).size() >= 2){
                cs.Status = 'Closed';        
             }
        }
@@ -62,7 +62,7 @@ public class CaseTriggerHandler {
 
     for(Case cs : csList){
        if(cs.AccountId != null && accountToCaseMap.containsKey(cs.AccountId)){
-           if(accountToCaseMap.get(cs.AccountId).size() > 3){
+           if(accountToCaseMap.get(cs.AccountId).size() >= 3){
                cs.Status = 'Closed';        
             }
     }
