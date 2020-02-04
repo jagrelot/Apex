@@ -7,7 +7,7 @@
 
 public class CaseTriggerHandler {
     
-	public void limitCasesPerDayfoContact(List<Case> csList){  
+public void limitCasesPerDayfoContact(List<Case> csList){  
         
     Set<Id> contactIds = new Set<Id>();
         
