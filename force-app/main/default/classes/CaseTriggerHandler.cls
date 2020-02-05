@@ -34,7 +34,7 @@ for(Case cs : caseList){
 for(Case cs : csList){
   if(contactIdToCaseMap.get(cs.ContactId) != null){
     if(contactIdToCaseMap.get(cs.ContactId).size() >= 2){
-               cs.Status = 'Closed';        
+      	cs.Status = 'Closed';        
       }
    }
   }
