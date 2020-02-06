@@ -1,5 +1,5 @@
 @isTest
-private class CaseTriggerHandlerTest {
+private class LimitCasesPerDayTest {
 	
     @testSetup static void setup(){
         
