@@ -6,6 +6,7 @@
  */
 
 trigger CaseTrigger on Case (before insert, after insert, before update, after update, after undelete, after delete) {    
+    
     if(trigger.isBefore && trigger.isInsert){
         LimitCasesPerDay.limitCasesPerDayForContact(Trigger.new);
     }
