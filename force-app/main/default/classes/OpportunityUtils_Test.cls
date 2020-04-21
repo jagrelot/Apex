@@ -7,10 +7,4 @@ private class OpportunityUtils_Test
 
     // 100% coverage can be achieved without testing all scenarios,
     // so don't stop just because you have full coverage.
-
-    @TestSetup
-    static void setUP(){
-        
-        
-    }
 }
