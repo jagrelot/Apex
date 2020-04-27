@@ -16,12 +16,8 @@ public with sharing class IntermediateDate1 {
         DateTime dateStr2DateTime = convertDateTimeStringToNewDateTime(dateStr2);
 
         Long milliseconds = Math.abs(dateStr1DateTime.getTime() - dateStr2DateTime.getTime());
-        Long seconds = milliseconds / 1000;
-        Long minutes = seconds / 60;
-        Long hours = minutes / 60;
-        Long days = hours / 24;
 
-        return  Integer.valueOf(hours);
+        return Integer.valueOf(milliseconds / (1000 * 60 * 60));
     }
 
 /*  
@@ -37,7 +33,7 @@ public with sharing class IntermediateDate1 {
         dateString = dateString.replace('/', '-');
         Datetime dateStringDateTime = Datetime.valueOf(dateString);
 
-        DateTime dateTimeNewInstance = DateTime.newInstance(dateStringDateTime.day() + 2000,dateStringDateTime.year(),dateStringDateTime.month(),dateStringDateTime.hour(),
+        DateTime dateTimeNewInstance = DateTime.newInstance(dateStringDateTime.day() + 2000,dateStringDateTime.month(),dateStringDateTime.year(),dateStringDateTime.hour(),
         dateStringDateTime.minute(),dateStringDateTime.second());
 
         return dateTimeNewInstance;
