@@ -38,8 +38,7 @@ public with sharing class OpportunityUtils
         {
             FeedItem item=new FeedItem(Body='Opportunity ' + opp.Name + ' closes in less than ' + days + ' days',
                                     ParentId=grp.Id,
-                                    Type='ContentPost');
-
+                                    Type='ContentPost');                   
             insert item;
         }
     }

@@ -1,0 +1,42 @@
+<apex:page controller="JokeCallout" sidebar="false" showHeader="false" standardStylesheets="false">
+<style>
+    body {
+    text-align: center;
+    }
+
+    form {
+    display: inline-block;
+    }
+
+    #chuck { 
+        margin-top: 100px;
+        margin-bottom: 25px;
+    }
+
+    #joke {
+        color: rgb(19, 2, 2);
+        font-size: x-large;
+    }
+
+    input[type="button"]{
+        background-color: #4CAF50; /* Green */
+        border: none;
+        color: white;
+        padding: 15px 32px;
+        text-align: center;
+        text-decoration: none;
+        font-size: 16px;
+    }
+
+</style>
+        <apex:form>
+                <img id="chuck" src="https://avatars1.githubusercontent.com/u/17794049?s=200&v=4"></img>
+                <br></br>
+                <apex:commandButton action="{!makeJokeCallout}" styleClass="slds-vf-button_brand" value="Get Chucked!" reRender="jokepanel"/>
+                <br></br>
+                <br></br>
+                <apex:outputPanel id="jokepanel">
+                    <span id="joke">{!joke}</span>
+                </apex:outputPanel>
+        </apex:form>        
+</apex:page>
